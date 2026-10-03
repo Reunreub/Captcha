@@ -1,0 +1,31 @@
+REAL-TIME BATTLE SETUP
+
+The Battle page is designed to find another visitor who is online at the same time.
+It uses Firebase Authentication (anonymous sign-in) and Firebase Realtime Database.
+
+1. Create a Firebase project at https://console.firebase.google.com/
+2. Add a Web app to the project.
+3. Copy the Firebase Web app configuration.
+4. Open battle.html.
+5. Find FIREBASE_CONFIG near the top of the module script.
+6. Replace every PASTE_... value with the matching value from your Firebase config.
+7. In Firebase Console, open Authentication > Sign-in method and enable Anonymous.
+8. Open Realtime Database and create a database.
+9. In Realtime Database > Rules, paste the contents of firebase.rules.json and publish.
+10. Upload all six HTML files plus firebase.rules.json to your hosting/GitHub repository.
+
+Important:
+- The Firebase Web configuration is intended to be placed in browser code. It is not a server password.
+- The database Security Rules are what control access. Do not leave the database in open Test Mode when the site is public.
+- The battle only matches visitors who are actually online and looking for a battle at roughly the same time.
+- If nobody else is waiting, the player remains in the matchmaking screen until they cancel.
+- No email, name, or password is required by this Battle implementation.
+
+Current battle flow:
+Visitor A -> anonymous sign-in -> joins queue
+Visitor B -> anonymous sign-in -> joins queue
+Server database -> room created -> both clients see opponent
+Both clients -> synchronized start -> 60-second CAPTCHA race
+Both clients -> live solve counts are synchronized
+
+For production use, the Firebase rules can be hardened further and matchmaking can be moved to trusted server-side code to prevent cheating. The current version is intended as a practical small-site implementation.
