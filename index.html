@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CAPTCHA Speed Test &amp; Trainer</title>
-<!-- ADSENSE SITE VERIFICATION / AUTO-ADS SNIPPET HERE (paste the <script> Google gives you when you apply) -->
+<!-- ADSENSE: paste Google's exact site-verification / Auto ads code here after approval. -->
 <meta name="description" content="How fast can you solve CAPTCHAs? Take the 60-second speed test, beat the real reCAPTCHA boss round, and see what your speed could earn.">
 <style>
 :root{
@@ -108,12 +108,13 @@ h2{margin:.2em 0 .4em;font-size:clamp(1.4rem,5vw,2rem)}
 .info code{background:#0b0a19;padding:1px 6px;border-radius:5px;color:var(--lime)}
 .fnav{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
 footer{padding:6px 0 24px;text-align:center;color:var(--muted);font-size:.78rem}
+.menu-toggle{position:fixed;top:14px;right:14px;z-index:1001;width:48px;height:48px;border:1px solid var(--line);border-radius:12px;background:rgba(16,14,31,.94);cursor:pointer;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;box-shadow:0 8px 25px rgba(0,0,0,.35)}.menu-toggle span{display:block;width:22px;height:2px;background:var(--cyan);border-radius:2px}.menu-toggle:focus-visible,.menu-close:focus-visible,.site-menu a:focus-visible,.site-menu summary:focus-visible{outline:3px solid var(--lime);outline-offset:3px}.menu-backdrop{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.58);backdrop-filter:blur(2px)}.site-menu{position:fixed;top:0;right:0;z-index:1000;width:min(330px,88vw);height:100vh;height:100dvh;overflow-y:auto;background:linear-gradient(180deg,var(--panel2),var(--panel));border-left:1px solid var(--line);box-shadow:-20px 0 60px rgba(0,0,0,.55);transform:translateX(105%);transition:transform .22s ease;padding:18px}.site-menu.open{transform:translateX(0)}.menu-head{display:flex;align-items:center;justify-content:space-between;padding:8px 2px 18px;border-bottom:1px solid var(--line);color:var(--cyan)}.menu-close{border:0;background:transparent;color:var(--text);font-size:2rem;line-height:1;cursor:pointer;padding:4px 8px;border-radius:8px}.site-menu nav{display:flex;flex-direction:column;gap:6px;padding-top:14px}.site-menu nav>a,.site-menu summary{display:block;padding:13px 12px;border-radius:10px;color:var(--text);text-decoration:none;cursor:pointer;font-weight:700}.site-menu nav>a:hover,.site-menu summary:hover{background:rgba(25,240,255,.08);color:var(--cyan)}.site-menu summary{list-style:none}.site-menu summary::-webkit-details-marker{display:none}.site-menu summary:after{content:"＋";float:right;color:var(--cyan)}.site-menu details[open] summary:after{content:"−"}.mode-links{padding:0 0 8px 12px;display:flex;flex-direction:column;gap:3px}.mode-links a{padding:9px 12px;color:var(--muted);text-decoration:none;border-left:2px solid var(--line)}.mode-links a:hover{color:var(--cyan);border-color:var(--cyan)}body.menu-open{overflow:hidden}@media(prefers-reduced-motion:reduce){.site-menu{transition:none}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap"><button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteMenu"><span></span><span></span><span></span></button><div class="menu-backdrop" id="menuBackdrop" hidden></div><aside class="site-menu" id="siteMenu" aria-label="Site menu" aria-hidden="true"><div class="menu-head"><strong>CAPTCHA Practice</strong><button class="menu-close" id="menuClose" type="button" aria-label="Close menu">&times;</button></div><nav><a href="index.html">Practice</a><details><summary>Modes</summary><div class="mode-links"><a href="modes.html#math">Math CAPTCHA</a><a href="modes.html#color">Color CAPTCHA</a><a href="modes.html#grid">Grid CAPTCHA</a></div></details><a href="earn-money.html">Earn money</a><a href="about.html">About</a><a href="privacy.html">Privacy</a></nav></aside>
 
-<div class="ad" id="adTop"><!-- GOOGLE ADSENSE CODE HERE (TOP BANNER) --></div>
+<div class="ad" id="adTop"><!-- ADSENSE AD UNIT: paste the exact Google ad-unit code here after approval. --></div>
 
 <header>
   <h1>CAPTCHA Speed Test</h1>
@@ -215,26 +216,26 @@ footer{padding:6px 0 24px;text-align:center;color:var(--muted);font-size:.78rem}
   </ul>
 
   <h3>What CAPTCHA-solving work actually pays</h3>
-  <p>The earnings estimate on your scorecard is deliberately conservative. It takes your solves per hour, multiplies by your accuracy, cuts it to 70% to allow for page loading and gaps between tasks, and applies a rate of $0.50 to $1.00 per 1,000 solved text CAPTCHAs. For most people that works out to well under a few dollars an hour, so treat it as small side income rather than a salary. Real task rates, task types, availability and payout minimums change, so read the current figures on the <a href="https://2captcha.com" target="_blank" rel="noopener sponsored">2Captcha</a> site before you decide. That link is an affiliate link; see the <a href="about.html">About page</a> for how this site earns money.</p>
+  <p>The earnings estimate on your scorecard is deliberately conservative. It takes your solves per hour, multiplies by your accuracy, cuts it to 70% to allow for page loading and gaps between tasks, and applies a rate of $0.50 to $1.00 per 1,000 solved text CAPTCHAs. For most people that works out to well under a few dollars an hour, so treat it as small side income rather than a salary. Real task rates, task types, availability and payout minimums change, so read the current figures on the <a href="https://2captcha.com/auth/register/?from=28388449" target="_blank" rel="noopener sponsored">2Captcha</a> site before you decide. That link is an affiliate link; see the <a href="about.html">About page</a> for how this site earns money.</p>
 
   <h3>Questions</h3>
-  <p><b>Why does the reCAPTCHA boss always pass?</b> It uses Google's public test key, which accepts every click. It is a real Google widget with real timing, but it is not protecting anything.</p>
+  <p><b>Why does the reCAPTCHA boss always pass?</b> It uses Google reCAPTCHA v2. Replace SITE_KEY below with the production key registered for your site to receive Google's normal challenge behavior.</p>
   <p><b>Do you save my scores?</b> Only your best WPM, and only inside your own browser (local storage). Nothing about your game is sent to a server. Details are in the <a href="privacy.html">Privacy Policy</a>.</p>
   <p><b>Can I practise without the boss round?</b> If reCAPTCHA cannot load, for example because a blocker stops Google's script, a skip button appears after a few seconds.</p>
 </section>
 
-<div class="ad" id="adBottom" style="margin-top:18px"><!-- GOOGLE ADSENSE CODE HERE (BOTTOM BANNER) --></div>
+<div class="ad" id="adBottom" style="margin-top:18px"><!-- ADSENSE AD UNIT: paste the exact Google ad-unit code here after approval. --></div>
 
 <footer>
-  <nav class="fnav" aria-label="Site"><a href="index.html">Game</a><a href="modes.html">Modes</a><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="contact.html">Contact</a></nav>
-  <p>Affiliate disclosure: the 2Captcha links on this site are referral links, and I may earn a commission if you sign up. Earnings figures are estimates, not promises. The boss round uses Google's reCAPTCHA test key.</p>
+  
+  <p>Affiliate disclosure: the 2Captcha links on this site are referral links, and I may earn a commission if you sign up. Earnings figures are estimates, not promises. The Boss Round uses Google reCAPTCHA v2. Add your production site key before publishing.</p>
 </footer>
 </div>
 
 <script>
 /* ===== CONFIG ===== */
-var REF_LINK = "https://2captcha.com";                          // <-- your referral link
-var SITE_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";      // Google's public TEST key
+var REF_LINK = "https://2captcha.com/auth/register/?from=28388449";                          // <-- your referral link
+var SITE_KEY = "PASTE_YOUR_REAL_RECAPTCHA_V2_SITE_KEY_HERE"; // Create a production v2 Checkbox key for your domain
 var GAME_SECONDS = 60;
 
 /* ===== reCAPTCHA loader hook (must be global, defined before the API script runs) ===== */
@@ -465,5 +466,5 @@ window.onRecaptchaLoad = function () {
   showBest();
 })();
 </script>
-</body>
+<script>(function(){var t=document.getElementById('menuToggle'),m=document.getElementById('siteMenu'),b=document.getElementById('menuBackdrop'),c=document.getElementById('menuClose');if(!t||!m||!b||!c)return;function o(){m.classList.add('open');b.hidden=false;m.setAttribute('aria-hidden','false');t.setAttribute('aria-expanded','true');document.body.classList.add('menu-open')}function x(){m.classList.remove('open');b.hidden=true;m.setAttribute('aria-hidden','true');t.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open')}t.addEventListener('click',function(){m.classList.contains('open')?x():o()});c.addEventListener('click',x);b.addEventListener('click',x);document.addEventListener('keydown',function(e){if(e.key==='Escape')x()});m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',x)})})();</script></body>
 </html>
